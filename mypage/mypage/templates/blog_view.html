@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="ui title header">{{ blog.title }}</div>
+    <div>{{ blog.date }}</div>
+    <div>{{ blog.author }}</div>
+    <div class="ui text container">
+    {{ blog.content }}
+    </div>
+    <a class="ui button" href="{% url 'blog_edit' blog.id %}">Edit</a>
+     <a class="ui button" href="{% url 'index'  %}">Home</a>
+{% endblock %}
